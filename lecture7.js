@@ -4,4 +4,5 @@ console.log("1" + 2 + 2); // 122
 console.log(1 + 2 + "2"); // 32
 
 console.log(+true); // 1
+// true+ it gives error
 console.log(+""); // 0
