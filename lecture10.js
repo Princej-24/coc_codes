@@ -1,0 +1,22 @@
+// stack in primitive and heap memory in non-primitive 
+
+let myYoutubename = "hiteshchoudharydotcom"
+
+let anothername = myYoutubename 
+anothername = "chaiaurcode"
+
+console.log(myYoutubename); // hiteshchoudharydotcom
+console.log(anothername); // chaiaurcode
+
+// call by refference
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email) // hitesh@google.com
+console.log(userTwo.email) // hitesh@google.com
