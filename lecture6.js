@@ -4,8 +4,8 @@ console.log(typeof score);
 console.log(typeof(score)); // same as above
 
 let valueInNumber = Number(score) // conversion in number 
-console.log(typeof valueInNumber);
-console.log(valueInNumber);
+console.log(typeof valueInNumber); // number
+console.log(valueInNumber); // NaN
 
 //$
 // "33" => 33
@@ -13,7 +13,20 @@ console.log(valueInNumber);
 // null => 0
 // undefined => NaN
 // true => 1; false => 0
-// prince => NaN 
+
+let isLoggedIns = 1
+
+let booleanIsLoggedIns = Boolean(isLoggedIns)
+ console.log(booleanIsLoggedIns); // true
+
+//-------------------------------------------------
+
+ let isLoggedInss = ""
+
+let booleanIsLoggedInss = Boolean(isLoggedInss)
+ console.log(booleanIsLoggedInss); // false
+
+//--------------------------------------------------
 
 let isLoggedIn = "prince"
 
