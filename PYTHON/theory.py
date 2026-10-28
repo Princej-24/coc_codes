@@ -96,9 +96,27 @@ output // Lemon-Masala-Ginger
 >>> print(chai)
 Masala
 Chai
->>> chai = r"Masala\nchai"
+>>> chai = r"Masala\nchai" // raw strings , Treat backslashes \ as normal characters instead of interpreting them as escape sequences 
+we can also use , path = "c:\\user\\pwd" , because \\ represents one literal backslash
 >>> print(chai)
 Masala\nchai
 
 """
+"""
+ for c in "chai":
+...     print(c , end="-") // must be aware of indentation 
 
+"""
+"""
+ if "oolong" in tea: // if statement
+    print("true")
+
+"""
+# tea.append("oolong") // to add element at the end
+#new_tea=tea.copy() // to copy the existing elements and to allocate the different reference
+#new_tea=tea // to copy the existing elements but it passes the old referece to new , here both will indicate the same refence
+#range(10) // output: range(0,10)
+#squarenumber=[x**2 for x in range(10)] 
+def add(a,b):
+    print(a,b)
+    add(2,3)
