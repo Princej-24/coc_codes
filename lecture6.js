@@ -5,9 +5,10 @@ console.log(typeof(score)); // same as above
 
 let valueInNumber = Number(score) // conversion in number 
 console.log(typeof valueInNumber); // number
-console.log(valueInNumber); // NaN
+console.log(valueInNumber); // NaN // @
 
 //$
+//@
 // "33" => 33
 // "33abc" => NaN(not a num)
 // null => 0
