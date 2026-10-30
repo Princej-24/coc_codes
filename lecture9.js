@@ -24,5 +24,12 @@ console.log(typeof anotherId); // symbol
 // js is dynamically typed languague 
 // non-primitive data types are : array,functions,objects
 
+let bigNumber = 123456789123456789123456789n
+console.log(typeof bigNumber)
+
+// data type of all non-primitive types is object except function type
+// data type of a function is function or object function 
+// data type of symbol is symbol 
+
 
 
