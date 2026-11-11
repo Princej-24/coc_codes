@@ -1,0 +1,1 @@
+// global scope in console (browser) is different and global scope in code environment is different 
