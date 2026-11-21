@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="anyname" id="hii" class="hello"></div>
+    <p>Lorem ipsum dolor sit amet</p>
+    <input type="password" name="" id="">           // input:
+    <ul>                                            // ul>li*3
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
+
+// document.getElementById()
+// document.getElementById().id // "hii" output
+// document.getElementById().class // error
+// document.getElementById().className // "hello"
+// document.getElementById().className.getAttribute('class') // "hello"
+// document.getElementById().className.setAttribute('class','bye')
+
+
+// const task = document.getElementById()
+// task.style.backgroundcolor = "blue"
+// task.style.padding = "10px"
+
+
+
+// task.innerText = this will show only visible part 
+// task.textContent = this will show whole part, (display:none),part also
+// task.innerHTML = this will show the whole structure (tags)
+
+
+
+// .querySelector = it will give the first statement among more than 2 statement with the same tags 
+// document.querySelector('#hii') // selecting id 
+<!-- input: -->
+<!-- ul>li*3 -->
+// document.querySelector('input[type="password"]') // to select input
+
+
+
+// document.querySelectorAll('ul')
+// querySelectorAll m NodeList milta h
+// NodeList ko direct style bhi nhi provide kr skte 
+// kaise kr skte h example
+// const Prince = document.querySelectorAll('ul')
+// Prince[1].style.color='green'
+// NodeList aur HTMLCollection array s alag h 
+
+
+
+// NodeList k uper foreach loop chalaya jata h , map ko chalana h tho pehle humko NodeList ko array m change krna hoga 
+// Prince.foreach(function (P){
+    P.style.backgroundColor='red'
+})
+
+
+
+// getElementByClassName m HTMLCollection milta h
+// HTMLCollection ye bhi array nhi h , loop direct use nhi kr skte 
+// Array.from(//name) // to convert , example from getElementByClassName to Array 
