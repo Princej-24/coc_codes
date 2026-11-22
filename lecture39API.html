@@ -1,0 +1,39 @@
+// randomuser.me (yha s tum API la skte ho ) // isko read  krne k leye json formatter
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    // AJAX request
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState); // agar isko bahar rkhte tb ye ek bar output deta mtlb continuously track nhi ho rha tha , issleye isko continuously track krne k leye function k ander rkhe h tho ab output 
+        // 2
+        // 3
+        // 4th step tk jayega 
+        if (xhr.readyState === 4) {
+            // console.log(this.responseText) // to print details here this is added to access current context 
+            const data = JSON.parse(this.responseText) // converting string into json 
+            console.log(typeof data); // bina json.parse kiye string aaa rha tha ab jjakr ye json m convert hua h mtllb object bn gya h 
+            // url s jb responce aata hai to vo string m aata h
+            console.log(data.followers);
+        }
+    }
+    xhr.send(); // to call open 
+</script>
+</html>
+// console.log ye ek debugging tool h means browser ka dev tool h
+// v8 engine
