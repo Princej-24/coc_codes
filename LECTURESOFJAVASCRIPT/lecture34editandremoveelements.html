@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li) // ab page pr display karega , attaching this to page , because this is created in memory only
+    } // yha pr tho ek hi li h tho easly traverse ho ja rha h agar man lo ek lakh li hota tho function ko saare pr traverse krna pdta issleye hme optimized way m krna hoga 
+
+    addLanguage("python")
+    addLanguage("typescript") 
+
+    function addOptimizedLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimizedLanguage('golang') // more optimized way
+
+    // yha tk output ye rehega
+    //Javascript
+    //python
+    //typescript
+    //golang
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)") // ab edit krna hai tho pehle select tho krna padega tho hm yha select kr rhe h python ko 
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo" // ye bhi ek tarika h change krne ka pr ye optimized nhi h 
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo" // new property
+    secondLang.replaceWith(newli) 
+
+    // ab output ye ho jayega
+    //Javascript
+    //Mojo
+    //typescript
+    //golang
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>' // ek aur method
+
+    // ab output ye ho jayega
+    //TypeScript
+    //Mojo
+    //typescript
+    //golang
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+    // ab output ye ho jayega
+    //TypeScript
+    //Mojo
+    //typescript
+
+</script>
+</html>
