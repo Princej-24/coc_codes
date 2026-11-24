@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Prince") // it will give output after 2 sec
+    },2000)
+    // or
+    // same thing u can do in this manner also 
+    const sayPrince = function(){
+        console.log("Hitesh");
+    }
+    setTimeout(sayPrince,2000)
+
+
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    setTimeout(changeText, 2000)
+
+
+    // const changeMe = setTimeout(changeText, 2000)
+
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout(changeMe)
+    //     console.log("STOPPED")
+    // }) // if u want to stop it before 2 second 
+
+</script>
+</html>
+
+
+
+//---------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    setInterval(function(){
+        console.log("Prince") // ye har ek 2 sec k bad Prince print karega
+    },2000)
+
+
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    const intervalId = setInterval(sayDate, 1000, "hi")
+
+    clearInterval(intervalId) // it will stop continuously running interval
+
+
+</script>
+</html>
+
+// in this lecture there are two projects , for which i have created another folder for it 
